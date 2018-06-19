@@ -44,10 +44,11 @@ export class ResultsComponent implements OnInit {
 
 
   goToSearch() {
-    this._router.navigate(['search/search-page']);
+    this._router.navigate(['search']);
   }
 
-  selectbus(busid) { 
+  selectbus(busid) {
+    //console.log(busid);
     this.enablebusdetails = busid;
     this.busDetails = this.dataSer.getSpecificBus(busid);
 

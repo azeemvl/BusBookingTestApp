@@ -26,6 +26,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProjComponent } from './proj/proj.component';
 import { TemplateComponent } from './validation/template/template.component';
 import { ReactiveComponent } from './validation/reactive/reactive.component';
+import { CustobservablesComponent } from './custobservables/custobservables.component';
+import { AlertComponent } from './alert/alert.component';
+import { AlertService } from './alert.service';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,9 @@ import { ReactiveComponent } from './validation/reactive/reactive.component';
     ProjComponent,
     TemplateComponent,
     ReactiveComponent,
+    CustobservablesComponent,
+    AlertComponent,
+    LifecycleComponent,
     // MatProgressBarModule
   ],
   imports: [
@@ -54,7 +61,7 @@ import { ReactiveComponent } from './validation/reactive/reactive.component';
     ReactiveFormsModule
     // MatProgressBarModule
   ],
-  providers: [RouteGuardService, DataService, DatePipe, AjaxService],
+  providers: [RouteGuardService, DataService, DatePipe, AjaxService, AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
